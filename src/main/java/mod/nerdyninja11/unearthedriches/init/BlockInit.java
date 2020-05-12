@@ -22,7 +22,7 @@ public class BlockInit {
 	public static final Block mithril_ore = null;
 	public static final Block raw_mithril_ore = null;
 	
-	public static final Block mithril_chain = null;
+	public static final Block mithril_chain = null; 
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
