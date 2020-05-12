@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": {"model":"unearthedriches:block/mithril_chain"},
+		"facing=south": {"model":"unearthedriches:block/mithril_chain", "y": 180},
+		"facing=west": {"model":"unearthedriches:block/mithril_chain", "y": 270},
+		"facing=east": {"model":"unearthedriches:block/mithril_chain", "y": 90}
+	}
+}

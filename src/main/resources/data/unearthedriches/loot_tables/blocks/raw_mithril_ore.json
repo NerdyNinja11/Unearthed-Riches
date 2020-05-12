@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "weight": 1,
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "unearthedriches:raw_mithril_ore",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "unearthedriches:blocks/raw_mithril_ore_no_silktouch"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

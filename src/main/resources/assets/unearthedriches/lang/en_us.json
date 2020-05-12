@@ -1,0 +1,22 @@
+{
+	"item.unearthedriches.mithril_ingot": "Mithril",
+	"item.unearthedriches.mithril_nugget": "Mithril Nugget",
+	
+	"item.unearthedriches.chocolate_bar": "Chocolate Bar",
+	"item.unearthedriches.biofuel": "Biofuel",
+	
+	"item.unearthedriches.mithril_dagger": "Mithril Dagger",
+	
+	"item.unearthedriches.mithril_helmet": "Mithril Chain Hood",
+	"item.unearthedriches.mithril_chestplate": "Mithril Chain Hauberk",
+	"item.unearthedriches.mithril_leggings": "Mithril Chain Greaves",
+	"item.unearthedriches.mithril_boots": "Mithril Chain Boots",
+	
+	"block.unearthedriches.mithril_block": "Mithril Block",
+	"block.unearthedriches.mithril_ore": "Mithril Ore",
+	"block.unearthedriches.raw_mithril_ore": "Raw Mithril Ore",
+	"block.unearthedriches.mithril_chain": "Mithril Chain",
+	
+	"itemGroup.unearthedrichestab": "Unearthed Riches"
+	
+}
