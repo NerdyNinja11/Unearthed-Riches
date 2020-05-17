@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "unearthedriches:mithril_ores"
+  },
+  "result": "unearthedriches:mithril_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

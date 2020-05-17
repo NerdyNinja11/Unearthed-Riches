@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:smelting",
+    "ingredient": [
+    {
+      "item": "unearthedriches:mithril_chestplate"
+    },
+    {
+      "item": "unearthedriches:mithril_leggings"
+    },
+    {
+      "item": "unearthedriches:mithril_boots"
+    },
+    {
+      "item": "unearthedriches:mithril_helmet"
+    },
+    {
+      "item": "unearthedriches:mithril_dagger"
+    }
+  ],
+  "result": "unearthedriches:mithril_nugget",
+  "experience": 0.5,
+  "cookingtime": 200
+}

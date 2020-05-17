@@ -1,3 +1,6 @@
 {
-    "parent": "unearthedriches:block/mithril_chain"
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "unearthedriches:items/mithril_chain"
+	}
 }

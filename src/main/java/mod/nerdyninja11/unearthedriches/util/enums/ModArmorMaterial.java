@@ -1,4 +1,4 @@
-package mod.nerdyninja11.unearthedriches.objects.materials;
+package mod.nerdyninja11.unearthedriches.util.enums;
 
 import java.util.function.Supplier;
 
@@ -17,7 +17,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 	MITHRIL_CHAIN(UnearthedRiches.MOD_ID + ":mithril_chain", 20, new int[] {2, 5, 6, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 1.0F, () -> {
-		return Ingredient.fromItems(BlockInit.mithril_chain);
+		return Ingredient.fromItems(BlockInit.MITHRIL_CHAIN.get());
 	});
 	
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] {13,15,16,11};

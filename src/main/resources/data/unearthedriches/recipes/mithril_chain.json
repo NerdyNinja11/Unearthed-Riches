@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N",
+    "I",
+    "N"
+  ],
+  "key": {
+    "N": {
+      "item": "unearthedriches:mithril_nugget"
+    },
+    "I": {
+      "item": "unearthedriches:mithril_ingot"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:mithril_chain"
+  }
+}

@@ -19,7 +19,7 @@ public class UnearthedRichesOreGen {
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 						Feature.ORE
 								.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-										BlockInit.raw_mithril_ore.getDefaultState(), 6)).withPlacement(mithrilOreConfig));
+										BlockInit.RAW_MITHRIL_ORE.get().getDefaultState(), 6)).withPlacement(mithrilOreConfig));
 			}
 		}
 	}

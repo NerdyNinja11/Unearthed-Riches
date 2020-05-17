@@ -1,4 +1,4 @@
-package mod.nerdyninja11.unearthedriches.objects.materials;
+package mod.nerdyninja11.unearthedriches.util.enums;
 
 import java.util.function.Supplier;
 
@@ -9,7 +9,7 @@ import net.minecraft.util.LazyValue;
 
 public enum ModToolTier implements IItemTier{
 	MITHRIL(3, 448, 10.0F, 3.0F, 20, () -> {
-		return Ingredient.fromItems(ItemInit.mithril_ingot);
+		return Ingredient.fromItems(ItemInit.MITHRIL_INGOT.get());
 	});
 
 	private final int harvestLevel;
