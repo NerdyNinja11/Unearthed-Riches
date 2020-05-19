@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "II"
+  ],
+  "key": {
+    "I": {
+      "item": "unearthedriches:magic_planks"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:magic_pressure_plate"
+  }
+}

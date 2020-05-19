@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI",
+    "ISI"
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:rods/wooden"
+    },
+    "S": {
+      "item": "unearthedriches:magic_planks"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:magic_fence_gate"
+  }
+}

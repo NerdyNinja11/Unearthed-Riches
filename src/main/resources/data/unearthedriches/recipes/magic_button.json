@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I"
+  ],
+  "key": {
+    "I": {
+      "item": "unearthedriches:magic_planks"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:magic_button"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_inventory",
+    "textures": {
+        "texture": "unearthedriches:blocks/magic_planks"
+    }
+}

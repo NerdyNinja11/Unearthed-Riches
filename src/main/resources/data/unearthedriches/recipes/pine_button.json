@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I"
+  ],
+  "key": {
+    "I": {
+      "item": "unearthedriches:pine_planks"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:pine_button"
+  }
+}
