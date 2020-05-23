@@ -1,5 +1,6 @@
 package mod.nerdyninja11.unearthedriches;
 
+import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
@@ -8,6 +9,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -39,6 +41,7 @@ public class UnearthedRiches
     	ItemInit.ITEMS.register(modEventBus);
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+    	BiomeInit.BIOMES.register(modEventBus);
 
         instance = this;
         
@@ -56,6 +59,11 @@ public class UnearthedRiches
     	});
     	
     	
+    }
+    
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+    	BiomeInit.registerBiomes();
     }
     
     private void setup(final FMLCommonSetupEvent event) {

@@ -63,6 +63,6 @@ public class QuarryBlock extends Block {
 	public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
 		return false;
 	}
-	
-	
+		
+
 }

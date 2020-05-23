@@ -2,6 +2,7 @@ package mod.nerdyninja11.unearthedriches.init;
 
 import mod.nerdyninja11.unearthedriches.UnearthedRiches;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ChainBlock;
+import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ModPressurePlateBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ModWoodButtonBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.QuarryBlock;
@@ -40,8 +41,8 @@ public class BlockInit {
 
 	
 	public static final RegistryObject<Block> MAGIC_PLANKS = BLOCKS.register("magic_planks",
-			() -> new Block(Block.Properties.create(Material.WOOD, MaterialColor.BLUE_TERRACOTTA)
-					.hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)));
+			() -> new FlammableBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLUE_TERRACOTTA)
+					.hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE), 20, 5));
 	public static final RegistryObject<Block> MAGIC_STAIRS = BLOCKS.register("magic_stairs",
 			() -> new StairsBlock(() -> MAGIC_PLANKS.get().getDefaultState(),
 					Block.Properties.from(MAGIC_PLANKS.get())));
@@ -60,8 +61,8 @@ public class BlockInit {
 							.hardnessAndResistance(0.5F).sound(SoundType.WOOD)));
 
 	public static final RegistryObject<Block> PINE_PLANKS = BLOCKS.register("pine_planks",
-			() -> new Block(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)
-					.hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)));
+			() -> new FlammableBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)
+					.hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE), 20, 5));
 	public static final RegistryObject<Block> PINE_STAIRS = BLOCKS.register("pine_stairs",
 			() -> new StairsBlock(() -> PINE_PLANKS.get().getDefaultState(),
 					Block.Properties.from(PINE_PLANKS.get())));
