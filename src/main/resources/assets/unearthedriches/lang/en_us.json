@@ -18,19 +18,30 @@
 	"block.unearthedriches.mithril_chain": "Mithril Chain",
 	"block.unearthedriches.quarry": "Quarry",
 	
+	
 	"block.unearthedriches.magic_planks": "Mythwood Planks",
+	"block.unearthedriches.magic_log": "Mythwood Log",
+	"block.unearthedriches.magic_leaves": "Mythwood Leaves",
+	"block.unearthedriches.magic_sapling": "Mythwood Sapling",
+	
 	"block.unearthedriches.magic_button": "Mythwood Button",
 	"block.unearthedriches.magic_stairs": "Mythwood Stairs",
 	"block.unearthedriches.magic_fence": "Mythwood Fence",
 	"block.unearthedriches.magic_fence_gate": "Mythwood Fence Gate",
 	"block.unearthedriches.magic_pressure_plate": "Mythwood Pressure Plate",
 	
+	
 	"block.unearthedriches.pine_planks": "Pine Planks",
+	"block.unearthedriches.pine_log": "Pine Log",
+	"block.unearthedriches.pine_leaves": "Pine Leaves",
+	"block.unearthedriches.pine_sapling": "Pine Sapling",
+	
 	"block.unearthedriches.pine_button": "Pine Button",
 	"block.unearthedriches.pine_stairs": "Pine Stairs",
 	"block.unearthedriches.pine_fence": "Pine Fence",
 	"block.unearthedriches.pine_fence_gate": "Pine Fence Gate",
 	"block.unearthedriches.pine_pressure_plate": "Pine Pressure Plate",
+	
 	
 	"biome.unearthedriches.mythforest_biome": "Mythforest",
 

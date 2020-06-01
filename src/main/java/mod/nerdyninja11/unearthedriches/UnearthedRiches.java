@@ -1,9 +1,13 @@
 package mod.nerdyninja11.unearthedriches;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
+import mod.nerdyninja11.unearthedriches.world.ModFeatureGeneration;
 import mod.nerdyninja11.unearthedriches.world.gen.UnearthedRichesOreGen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -28,7 +32,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod.EventBusSubscriber(modid = UnearthedRiches.MOD_ID, bus = Bus.MOD)
 public class UnearthedRiches
 {
-	//public static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "unearthedriches";
     public static UnearthedRiches instance;
 
@@ -42,6 +46,7 @@ public class UnearthedRiches
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
     	BiomeInit.BIOMES.register(modEventBus);
+    	
 
         instance = this;
         
@@ -67,7 +72,7 @@ public class UnearthedRiches
     }
     
     private void setup(final FMLCommonSetupEvent event) {
-    
+    	ModFeatureGeneration.biomeGen();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

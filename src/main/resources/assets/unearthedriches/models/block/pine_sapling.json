@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "unearthedriches:blocks/pine_sapling"
+    }
+}

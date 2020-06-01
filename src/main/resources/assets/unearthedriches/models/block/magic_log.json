@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "unearthedriches:blocks/magic_log_top",
+        "side": "unearthedriches:blocks/magic_log"
+    }
+}

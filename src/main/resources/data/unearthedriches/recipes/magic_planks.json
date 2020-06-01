@@ -1,0 +1,14 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "unearthedriches:magic_log"
+    }
+  ],
+  "result": {
+    "item": "unearthedriches:magic_planks",
+    "count": 4
+  }
+}

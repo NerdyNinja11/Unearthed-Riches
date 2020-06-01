@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "unearthedriches:blocks/magic_sapling"
+    }
+}
