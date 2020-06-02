@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
@@ -18,7 +19,7 @@ import net.minecraft.util.math.BlockPos;
 public class QuarryTileEntity extends TileEntity implements ITickableTileEntity {
 	
 	public int x, y, z, tick;
-	public boolean initialized;
+	public boolean initialized, powered;
 
 	public QuarryTileEntity(final TileEntityType<?> tileEntityTypeIn) {
 		super(tileEntityTypeIn);
@@ -31,34 +32,42 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity 
 	@Override
 	public void tick() {
 		if (!initialized) init();
-		tick++;
-		if (tick == 40) {
-			 tick = 0;
-			 if (y > 2) execute();
-		}
+		if (powered = world.getBlockState(this.pos).get(BlockStateProperties.LIT)) {
+			tick++;
+			if (tick == 60) {
+				tick = 0;
+				if (y > 4) execute();
+			}
+		}	
 	}
 	
 	
 	private void init() {
 		initialized = true;
-		x = this.pos.getX() - 1;
+		x = this.pos.getX();
 		y = this.pos.getY() - 1;
-		z = this.pos.getZ() - 1;
+		z = this.pos.getZ();
 		tick = 0;
 	}
 
+
 	private void execute() {
-		int index = 0;
-		Block[] blocksRemoved = new Block[9];
-		for (int x = 0; x < 3; x++) {
-			for (int z = 0; z < 3; z++) {
-				BlockPos posToBreak = new BlockPos(this.x + x, this.y, this.z + z);
-				blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
-				destroyBlock(posToBreak, true, null);
-				index++;
+		for (int i = 5; i > 0; i -= 2) {
+			int index = 0;
+			Block[] blocksRemoved = new Block[i*i];
+			for (int x = -(i-1)/2; x < (i+1)/2; x++) {
+				for (int z = -(i-1)/2; z < (i+1)/2; z++) {
+					if (y > 4) {
+						BlockPos posToBreak = new BlockPos(this.x + x, this.y, this.z + z);
+						blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
+						destroyBlock(posToBreak, true, null);
+						index++;
+					}
+				}
 			}
+			this.y--;
 		}
-		this.y--;
+		this.y += 2;
 	}
 
 	private boolean destroyBlock(BlockPos pos, boolean dropBlock, @Nullable Entity entity) {

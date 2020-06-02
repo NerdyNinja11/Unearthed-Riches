@@ -5,7 +5,9 @@ import java.util.stream.Stream;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.RedstoneTorchBlock;
 import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -14,9 +16,10 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
 
 public class QuarryBlock extends Block {
-	public BooleanProperty POWERED = BlockStateProperties.POWERED;
+	public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
 	
 	private static final VoxelShape SHAPE = Stream.of(
 			Block.makeCuboidShape(0, 10, 0, 16, 16, 16),
@@ -41,11 +44,28 @@ public class QuarryBlock extends Block {
 
 	public QuarryBlock(Properties properties) {
 		super(properties); 
+		 this.setDefaultState(this.stateContainer.getBaseState().with(LIT, Boolean.valueOf(false)));
 	}
 	
 	@Override
 	public boolean hasTileEntity(BlockState state) {
 		return true;
+	}
+	
+/*	public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
+		if (state.get(LIT) && !worldIn.isBlockPowered(pos)) {
+		worldIn.setBlockState(pos, state.cycle(LIT), 2);
+		}
+	}*/
+	
+	public void neighborChanged(BlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving) {
+	    if (!worldIn.isRemote) {
+	       boolean flag = state.get(LIT);
+	       if (flag != worldIn.isBlockPowered(pos)) {
+	    	   worldIn.setBlockState(pos, state.cycle(LIT), 2);
+	          
+	       }
+	    }
 	}
 	
 	@Override
@@ -62,6 +82,11 @@ public class QuarryBlock extends Block {
 	@Override
 	public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
 		return false;
+	}
+	
+	@Override
+	protected void fillStateContainer(Builder<Block, BlockState> builder) {
+		builder.add(BlockStateProperties.LIT);
 	}
 		
 

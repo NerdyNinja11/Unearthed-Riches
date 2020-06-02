@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public class FlammableLogBlock extends LogBlock{
-	private int flammability, encouragement;
+	private static int flammability, encouragement;
 	
 	
 	public FlammableLogBlock(MaterialColor verticalColor, Properties properties, int flammabilityIn, int encouragementIn) {
