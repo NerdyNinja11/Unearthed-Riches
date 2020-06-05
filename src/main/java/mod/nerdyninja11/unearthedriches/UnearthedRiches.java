@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
+import mod.nerdyninja11.unearthedriches.init.ModContainerTypes;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
 import mod.nerdyninja11.unearthedriches.world.ModFeatureGeneration;
 import mod.nerdyninja11.unearthedriches.world.gen.UnearthedRichesOreGen;
@@ -45,6 +46,7 @@ public class UnearthedRiches
     	ItemInit.ITEMS.register(modEventBus);
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+    	ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
     	BiomeInit.BIOMES.register(modEventBus);
     	
 

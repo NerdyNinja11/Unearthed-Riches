@@ -1,5 +1,6 @@
 package mod.nerdyninja11.unearthedriches.world.gen;
 
+import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
@@ -14,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class UnearthedRichesOreGen {
 	public static void generateOre() {
 		for (Biome biome : ForgeRegistries.BIOMES) {
-			if (biome == Biomes.SWAMP || biome == Biomes.DESERT) {
+			if (biome == Biomes.SNOWY_TUNDRA || biome == Biomes.DESERT || biome == BiomeInit.MYTHFOREST_BIOME.get()) {
 				ConfiguredPlacement<CountRangeConfig> mithrilOreConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(3, 0, 0, 32));
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 						Feature.ORE

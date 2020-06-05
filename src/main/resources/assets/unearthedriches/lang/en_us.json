@@ -12,12 +12,13 @@
 	"item.unearthedriches.mithril_leggings": "Mithril Chain Greaves",
 	"item.unearthedriches.mithril_boots": "Mithril Chain Boots",
 	
+	
 	"block.unearthedriches.mithril_block": "Mithril Block",
 	"block.unearthedriches.mithril_ore": "Mithril Ore",
 	"block.unearthedriches.raw_mithril_ore": "Raw Mithril Ore",
 	"block.unearthedriches.mithril_chain": "Mithril Chain",
 	"block.unearthedriches.quarry": "Quarry",
-	
+	"block.unearthedriches.nether_chest": "Netherwrought Storage Cube",
 	
 	"block.unearthedriches.magic_planks": "Mythwood Planks",
 	"block.unearthedriches.magic_log": "Mythwood Log",
@@ -30,7 +31,6 @@
 	"block.unearthedriches.magic_fence_gate": "Mythwood Fence Gate",
 	"block.unearthedriches.magic_pressure_plate": "Mythwood Pressure Plate",
 	
-	
 	"block.unearthedriches.pine_planks": "Pine Planks",
 	"block.unearthedriches.pine_log": "Pine Log",
 	"block.unearthedriches.pine_leaves": "Pine Leaves",
@@ -42,6 +42,8 @@
 	"block.unearthedriches.pine_fence_gate": "Pine Fence Gate",
 	"block.unearthedriches.pine_pressure_plate": "Pine Pressure Plate",
 	
+	
+	"container.nether_chest": "Netherwrought Storage Cube",
 	
 	"biome.unearthedriches.mythforest_biome": "Mythforest",
 

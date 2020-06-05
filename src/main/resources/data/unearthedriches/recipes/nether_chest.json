@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NON",
+    "MBM",
+    "NON"
+  ],
+  "key": {
+    "M": {
+      "item": "unearthedriches:mithril_ingot"
+    },
+    "N": {
+      "item": "minecraft:red_nether_bricks"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "B": {
+      "tag": "forge:rods/blaze"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:nether_chest"
+  }
+}

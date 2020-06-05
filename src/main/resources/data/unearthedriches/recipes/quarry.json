@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "INI",
+    "IDI"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/diamond"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:quarry"
+  }
+}
