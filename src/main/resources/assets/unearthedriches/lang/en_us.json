@@ -19,6 +19,7 @@
 	"block.unearthedriches.mithril_chain": "Mithril Chain",
 	"block.unearthedriches.quarry": "Quarry",
 	"block.unearthedriches.nether_chest": "Netherwrought Storage Cube",
+	"block.unearthedriches.cobblestone_road": "Cobbled Road",
 	
 	"block.unearthedriches.magic_planks": "Mythwood Planks",
 	"block.unearthedriches.magic_log": "Mythwood Log",
@@ -41,6 +42,9 @@
 	"block.unearthedriches.pine_fence": "Pine Fence",
 	"block.unearthedriches.pine_fence_gate": "Pine Fence Gate",
 	"block.unearthedriches.pine_pressure_plate": "Pine Pressure Plate",
+	
+	
+	"entity.unearthedriches.living_mushroom_entity": "Living Mushroom",
 	
 	
 	"container.nether_chest": "Netherwrought Storage Cube",

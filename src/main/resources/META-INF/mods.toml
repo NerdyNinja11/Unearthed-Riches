@@ -29,7 +29,7 @@ displayName="Unearthed Riches" #mandatory
 #logoFile="" #optional
 
 # A text field displayed in the mod UI
-credits="NerdyNinja11 and youtubers for tutorials" #optional
+credits="NerdyNinja11, and youtubers for tutorials" #optional
 
 # A text field displayed in the mod UI
 authors="NerdyNinja11" #optional

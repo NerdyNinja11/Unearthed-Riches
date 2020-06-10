@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"": [
+			{"model":"unearthedriches:block/cobblestone_road"},
+            {"model": "unearthedriches:block/cobblestone_road", "y": 90 },
+            {"model": "unearthedriches:block/cobblestone_road", "y": 180 },
+            {"model": "unearthedriches:block/cobblestone_road", "y": 270 }
+    	]
+	}
+}

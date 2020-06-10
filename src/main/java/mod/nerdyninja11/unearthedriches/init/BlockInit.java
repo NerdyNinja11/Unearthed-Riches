@@ -110,5 +110,8 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> NETHER_CHEST = BLOCKS.register("nether_chest",
 			() -> new NetherChestBlock(Block.Properties.from(Blocks.RED_NETHER_BRICKS)));
+	
+	public static final RegistryObject<Block> COBBLESTONE_ROAD = BLOCKS.register("cobblestone_road",
+			() -> new Block(Block.Properties.from(Blocks.COBBLESTONE).speedFactor(1.35F)));
 
 }

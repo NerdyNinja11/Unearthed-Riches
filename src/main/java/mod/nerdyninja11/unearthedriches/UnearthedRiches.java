@@ -7,6 +7,7 @@ import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModContainerTypes;
+import mod.nerdyninja11.unearthedriches.init.ModEntityTypes;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
 import mod.nerdyninja11.unearthedriches.world.ModFeatureGeneration;
 import mod.nerdyninja11.unearthedriches.world.gen.UnearthedRichesOreGen;
@@ -47,6 +48,7 @@ public class UnearthedRiches
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
     	ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
+    	ModEntityTypes.ENTITY_TYPES.register(modEventBus);
     	BiomeInit.BIOMES.register(modEventBus);
     	
 
@@ -75,6 +77,7 @@ public class UnearthedRiches
     
     private void setup(final FMLCommonSetupEvent event) {
     	ModFeatureGeneration.biomeGen();
+    	ModFeatureGeneration.entityBiomeGen();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
