@@ -1,6 +1,9 @@
 package mod.nerdyninja11.unearthedriches.entities;
 
+import java.util.UUID;
+
 import mod.nerdyninja11.unearthedriches.init.ModEntityTypes;
+import mod.nerdyninja11.unearthedriches.init.SoundInit;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ILivingEntityData;
@@ -17,7 +20,6 @@ import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.passive.MooshroomEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
@@ -25,6 +27,9 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.IWorld;
@@ -34,6 +39,7 @@ public class LivingMushroomEntity extends AnimalEntity {
 	private static final DataParameter<Integer> LIVING_MUSHROOM_TYPE = EntityDataManager.createKey(LivingMushroomEntity.class, DataSerializers.VARINT);
 	private EatGrassGoal eatGrassGoal;
 	private int eatTimer;
+	private UUID lightningUUID;
 
 	public LivingMushroomEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
 		super(type, worldIn);
@@ -86,15 +92,12 @@ public class LivingMushroomEntity extends AnimalEntity {
 	
 	@Override
 	public void onStruckByLightning(LightningBoltEntity lightningBolt) {
-	      MooshroomEntity mooshroomEntity = EntityType.MOOSHROOM.create(this.world);
-	      mooshroomEntity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, this.rotationPitch);
-	      mooshroomEntity.setNoAI(this.isAIDisabled());
-	      if (this.hasCustomName()) {
-	    	  mooshroomEntity.setCustomName(this.getCustomName());
+	      UUID uuid = lightningBolt.getUniqueID();
+	      if (!uuid.equals(this.lightningUUID)) {
+	         this.setLivingMushroomType(this.getLivingMushroomType() == 0 ? 1 : 0);
+	         this.lightningUUID = uuid;
+	         this.playSound(SoundEvents.ENTITY_MOOSHROOM_CONVERT, 2.0F, 1.0F);
 	      }
-
-	      this.world.addEntity(mooshroomEntity);
-	      this.remove();
 	}
 	
 	protected void registerData() {
@@ -129,4 +132,21 @@ public class LivingMushroomEntity extends AnimalEntity {
 		
 		return spawnDataIn;
 	}
+	
+	@Override
+	protected SoundEvent getAmbientSound() {
+		return SoundInit.LIVING_MUSHROOM_AMBIENT.get();
+	}
+	@Override
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+		return SoundInit.LIVING_MUSHROOM_HURT.get();
+	}
+	
+	@Override
+	protected SoundEvent getDeathSound() {
+		if (this.getName().getString().equals("Mario")) {
+			return SoundInit.LIVING_MUSHROOM_DEATH_JOKE.get();
+		} return SoundInit.LIVING_MUSHROOM_DEATH.get();
+	}
+	
 }

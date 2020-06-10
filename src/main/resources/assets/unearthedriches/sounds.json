@@ -1,0 +1,45 @@
+{
+	"entity.living_mushroom_entity.ambient": {
+		"category": "entity",
+		"subtitle": "subtitles.entity.living_mushroom_entity.ambient",
+		"sounds": [
+			{"name":"unearthedriches:entity/living_mushroom_entity.ambient1"},
+			{"name":"unearthedriches:entity/living_mushroom_entity.ambient2"},
+			{"name":"unearthedriches:entity/living_mushroom_entity.ambient3"},
+			{"name":"unearthedriches:entity/living_mushroom_entity.ambient4"},
+			{"name":"unearthedriches:entity/living_mushroom_entity.ambient5"}
+		]
+	},
+	
+	"entity.living_mushroom_entity.hurt": {
+		"category": "entity",
+		"subtitle": "subtitles.entity.living_mushroom_entity.hurt",
+		"sounds": [
+			{"name":"unearthedriches:entity/living_mushroom_entity.hurt"}
+		]
+	},
+	
+	"entity.living_mushroom_entity.death.joke": {
+		"category": "entity",
+		"subtitle": "subtitles.entity.living_mushroom_entity.death.joke",
+		"sounds": [
+			{"name":"unearthedriches:entity/living_mushroom_entity.death.joke"}
+		]
+	},
+	
+	"entity.living_mushroom_entity.jump.joke": {
+		"category": "entity",
+		"subtitle": "subtitles.entity.living_mushroom_entity.jump.joke",
+		"sounds": [
+			{"name":"unearthedriches:entity/living_mushroom_entity.jump.joke"}
+		]
+	},
+	
+	"entity.living_mushroom_entity.death": {
+		"category": "entity",
+		"subtitle": "subtitles.entity.living_mushroom_entity.death",
+		"sounds": [
+			{"name":"unearthedriches:entity/living_mushroom_entity.death"}
+		]
+	}
+}

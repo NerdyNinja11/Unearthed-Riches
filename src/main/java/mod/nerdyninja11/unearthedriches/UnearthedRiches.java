@@ -9,6 +9,7 @@ import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModContainerTypes;
 import mod.nerdyninja11.unearthedriches.init.ModEntityTypes;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
+import mod.nerdyninja11.unearthedriches.init.SoundInit;
 import mod.nerdyninja11.unearthedriches.world.ModFeatureGeneration;
 import mod.nerdyninja11.unearthedriches.world.gen.UnearthedRichesOreGen;
 import net.minecraft.item.BlockItem;
@@ -44,6 +45,7 @@ public class UnearthedRiches
     	modEventBus.addListener(this::setup);
     	modEventBus.addListener(this::doClientStuff);
     	
+    	SoundInit.SOUNDS.register(modEventBus);
     	ItemInit.ITEMS.register(modEventBus);
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);

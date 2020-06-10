@@ -47,6 +47,13 @@
 	"entity.unearthedriches.living_mushroom_entity": "Living Mushroom",
 	
 	
+	"subtitles.entity.living_mushroom_entity.ambient": "Living Mushroom Squeaks",
+	"subtitles.entity.living_mushroom_entity.death": "Living Mushroom Dies",
+	"subtitles.entity.living_mushroom_entity.hurt": "Living Mushroom Hurts",
+	"subtitles.entity.living_mushroom_entity.jump.joke": "Living Mushroom Jumps",
+	"subtitles.entity.living_mushroom_entity.death.joke": "Living Mushroom Dies",
+	
+	
 	"container.nether_chest": "Netherwrought Storage Cube",
 	
 	"biome.unearthedriches.mythforest_biome": "Mythforest",
