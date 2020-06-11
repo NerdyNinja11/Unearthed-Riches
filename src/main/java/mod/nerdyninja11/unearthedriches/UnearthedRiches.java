@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
+import mod.nerdyninja11.unearthedriches.init.ComposterRecipesInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModContainerTypes;
 import mod.nerdyninja11.unearthedriches.init.ModEntityTypes;
@@ -78,6 +79,7 @@ public class UnearthedRiches
     }
     
     private void setup(final FMLCommonSetupEvent event) {
+    	ComposterRecipesInit.initRecipes();
     	ModFeatureGeneration.biomeGen();
     	ModFeatureGeneration.entityBiomeGen();
     }

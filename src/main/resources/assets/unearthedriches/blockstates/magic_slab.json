@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "unearthedriches:block/magic_slab" },
+        "type=top": { "model": "unearthedriches:block/magic_slab_top" },
+        "type=double": { "model": "unearthedriches:block/magic_planks" }
+    }
+}

@@ -16,8 +16,8 @@ public class MarioJumpEvent {
 		LivingEntity livingEntity = event.getEntityLiving();
 		if (livingEntity instanceof LivingMushroomEntity) {
 			if (livingEntity.getName().getString().equals("Mario")) {
-				UnearthedRiches.LOGGER.info("testJumpEvent fired");
-				livingEntity.playSound(SoundInit.LIVING_MUSHROOM_JUMP_JOKE.get(), 2.0F, 1.0F);
+				livingEntity.playSound(SoundInit.LIVING_MUSHROOM_JUMP_JOKE.get(), 1.0F,
+						livingEntity.world.rand.nextFloat() * 0.1F + 0.9F);
 			}
 		}
 	}

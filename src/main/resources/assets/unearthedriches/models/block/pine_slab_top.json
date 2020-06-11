@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "unearthedriches:blocks/pine_planks",
+        "top": "unearthedriches:blocks/pine_planks",
+        "side": "unearthedriches:blocks/pine_planks"
+    }
+}

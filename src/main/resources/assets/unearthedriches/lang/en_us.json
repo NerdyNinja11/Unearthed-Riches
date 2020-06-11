@@ -4,6 +4,7 @@
 	
 	"item.unearthedriches.chocolate_bar": "Chocolate Bar",
 	"item.unearthedriches.biofuel": "Biofuel",
+	"item.unearthedriches.living_mushroom_spawn_egg": "Living Mushroom Spawn Egg",
 	
 	"item.unearthedriches.mithril_dagger": "Mithril Dagger",
 	
@@ -28,6 +29,7 @@
 	
 	"block.unearthedriches.magic_button": "Mythwood Button",
 	"block.unearthedriches.magic_stairs": "Mythwood Stairs",
+	"block.unearthedriches.magic_slab": "Mythwood Slab",
 	"block.unearthedriches.magic_fence": "Mythwood Fence",
 	"block.unearthedriches.magic_fence_gate": "Mythwood Fence Gate",
 	"block.unearthedriches.magic_pressure_plate": "Mythwood Pressure Plate",
@@ -39,6 +41,7 @@
 	
 	"block.unearthedriches.pine_button": "Pine Button",
 	"block.unearthedriches.pine_stairs": "Pine Stairs",
+	"block.unearthedriches.pine_slab": "Pine Slab",
 	"block.unearthedriches.pine_fence": "Pine Fence",
 	"block.unearthedriches.pine_fence_gate": "Pine Fence Gate",
 	"block.unearthedriches.pine_pressure_plate": "Pine Pressure Plate",

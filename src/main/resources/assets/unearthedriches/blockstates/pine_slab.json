@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "unearthedriches:block/pine_slab" },
+        "type=top": { "model": "unearthedriches:block/pine_slab_top" },
+        "type=double": { "model": "unearthedriches:block/pine_planks" }
+    }
+}
