@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "unearthedriches:pine_planks"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:pine_trapdoor",
+    "count": 2
+  }
+}

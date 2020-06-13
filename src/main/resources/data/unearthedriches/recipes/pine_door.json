@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "II",
+    "II",
+    "II"
+  ],
+  "key": {
+    "I": {
+      "item": "unearthedriches:pine_planks"
+    }
+  },
+  "result": {
+    "item": "unearthedriches:pine_door",
+    "count": 3
+  }
+}

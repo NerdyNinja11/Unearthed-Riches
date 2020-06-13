@@ -4,7 +4,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "unearthedriches:magic_log"
+      "tag": "unearthedriches:magic_logs"
     }
   ],
   "result": {

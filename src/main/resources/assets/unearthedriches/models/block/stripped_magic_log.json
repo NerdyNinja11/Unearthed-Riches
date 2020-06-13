@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "unearthedriches:blocks/stripped_magic_log_top",
+        "side": "unearthedriches:blocks/stripped_magic_log_side"
+    }
+}

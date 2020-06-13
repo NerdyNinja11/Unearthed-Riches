@@ -2,5 +2,11 @@
 	"parent": "item/handheld",
 	"textures": {
 		"layer0": "unearthedriches:items/mithril_dagger"
-	}
+	},
+	
+	"overrides": [
+		{"predicate": {"unearthedriches:is_glowing": 0.0}, "model": "unearthedriches:item/mithril_dagger"},
+		{"predicate": {"unearthedriches:is_glowing": 1.0}, "model": "unearthedriches:item/mithril_dagger_glowing"}
+	]
+	
 }

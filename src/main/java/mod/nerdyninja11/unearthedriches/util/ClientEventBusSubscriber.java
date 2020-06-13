@@ -18,15 +18,21 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = UnearthedRiches.MOD_ID, bus = Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBusSubscriber {
-
+	
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent event) {
 		ScreenManager.registerFactory(ModContainerTypes.NETHER_CHEST.get(), NetherChestScreen::new);
 
 		RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_SAPLING.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.PINE_SAPLING.get(), RenderType.getCutout());
+		
+		RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_DOOR.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.PINE_DOOR.get(), RenderType.getCutout());
+		
+		RenderTypeLookup.setRenderLayer(BlockInit.MAGIC_TRAPDOOR.get(), RenderType.getCutout());
 
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.LIVING_MUSHROOM_ENTITY.get(),
 				LivingMusroomEntityRenderer::new);
+		
 	}
 }

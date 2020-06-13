@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "unearthedriches:blocks/magic_door_bottom",
+        "top": "unearthedriches:blocks/magic_door_top"
+    }
+}

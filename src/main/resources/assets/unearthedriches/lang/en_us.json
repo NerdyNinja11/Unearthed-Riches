@@ -24,6 +24,9 @@
 	
 	"block.unearthedriches.magic_planks": "Mythwood Planks",
 	"block.unearthedriches.magic_log": "Mythwood Log",
+	"block.unearthedriches.magic_wood": "Mythwood",
+	"block.unearthedriches.stripped_magic_log": "Stripped Mythwood Log",
+	"block.unearthedriches.stripped_magic_wood": "Stripped Mythwood",
 	"block.unearthedriches.magic_leaves": "Mythwood Leaves",
 	"block.unearthedriches.magic_sapling": "Mythwood Sapling",
 	
@@ -33,9 +36,14 @@
 	"block.unearthedriches.magic_fence": "Mythwood Fence",
 	"block.unearthedriches.magic_fence_gate": "Mythwood Fence Gate",
 	"block.unearthedriches.magic_pressure_plate": "Mythwood Pressure Plate",
+	"block.unearthedriches.magic_door": "Mythwood Door",
+	"block.unearthedriches.magic_trapdoor": "Mythwood Trapdoor",
 	
 	"block.unearthedriches.pine_planks": "Pine Planks",
 	"block.unearthedriches.pine_log": "Pine Log",
+	"block.unearthedriches.pine_wood": "Pine Wood",
+	"block.unearthedriches.stripped_pine_log": "Stripped Pine Log",
+	"block.unearthedriches.stripped_pine_wood": "Stripped Pine Wood",
 	"block.unearthedriches.pine_leaves": "Pine Leaves",
 	"block.unearthedriches.pine_sapling": "Pine Sapling",
 	
@@ -45,7 +53,9 @@
 	"block.unearthedriches.pine_fence": "Pine Fence",
 	"block.unearthedriches.pine_fence_gate": "Pine Fence Gate",
 	"block.unearthedriches.pine_pressure_plate": "Pine Pressure Plate",
-	
+	"block.unearthedriches.pine_door": "Pine Door",
+	"block.unearthedriches.pine_trapdoor": "Pine Trapdoor",
+		
 	
 	"entity.unearthedriches.living_mushroom_entity": "Living Mushroom",
 	

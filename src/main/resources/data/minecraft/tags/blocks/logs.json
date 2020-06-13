@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "unearthedriches:magic_log",
-    "unearthedriches:pine_log"
+    "#unearthedriches:magic_logs",
+    "#unearthedriches:pine_logs"
   ]
 }

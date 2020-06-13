@@ -9,8 +9,10 @@ import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableLeavesBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableLogBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableSlabBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableStairsBlock;
+import mod.nerdyninja11.unearthedriches.objects.blocks.ModDoorBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ModPressurePlateBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ModSaplingBlock;
+import mod.nerdyninja11.unearthedriches.objects.blocks.ModTrapDoorBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ModWoodButtonBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.NetherChestBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.QuarryBlock;
@@ -68,13 +70,25 @@ public class BlockInit {
 							.hardnessAndResistance(0.5F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MAGIC_SLAB = BLOCKS.register("magic_slab",
 			() -> new FlammableSlabBlock(Block.Properties.from(MAGIC_PLANKS.get()), 20, 5));
+	public static final RegistryObject<Block> MAGIC_DOOR = BLOCKS.register("magic_door",
+			() -> new ModDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLUE_TERRACOTTA)
+					.hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<Block> MAGIC_TRAPDOOR = BLOCKS.register("magic_trapdoor",
+			() -> new ModTrapDoorBlock(Block.Properties.from(MAGIC_DOOR.get())));
 
 	public static final RegistryObject<Block> MAGIC_LOG = BLOCKS.register("magic_log",
 			() -> new FlammableLogBlock(MaterialColor.BLUE_TERRACOTTA,
 					Block.Properties.create(Material.WOOD, MaterialColor.BLUE_TERRACOTTA)
 					.hardnessAndResistance(3.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE),5, 5));
+	public static final RegistryObject<Block> MAGIC_WOOD = BLOCKS.register("magic_wood",
+			() -> new FlammableBlock(Block.Properties.from(MAGIC_LOG.get()),5, 5));
+	public static final RegistryObject<Block> STRIPPED_MAGIC_LOG = BLOCKS.register("stripped_magic_log",
+			() -> new FlammableLogBlock(MaterialColor.BLUE_TERRACOTTA,
+					Block.Properties.from(MAGIC_LOG.get()),5, 5));
+	public static final RegistryObject<Block> STRIPPED_MAGIC_WOOD = BLOCKS.register("stripped_magic_wood",
+			() -> new FlammableBlock(Block.Properties.from(MAGIC_LOG.get()),5, 5));
 	public static final RegistryObject<Block> MAGIC_LEAVES = BLOCKS.register("magic_leaves",
-			() -> new FlammableLeavesBlock(Block.Properties.create(Material.LEAVES, MaterialColor.BLUE_TERRACOTTA)
+			() -> new FlammableLeavesBlock(Block.Properties.create(Material.LEAVES, MaterialColor.LIME_TERRACOTTA)
 					.hardnessAndResistance(0.2f).sound(SoundType.WOOD).tickRandomly().sound(SoundType.PLANT).notSolid(),
 					60, 30, 2));
 	public static final RegistryObject<Block> MAGIC_SAPLING = BLOCKS.register("magic_sapling",
@@ -100,9 +114,20 @@ public class BlockInit {
 							.hardnessAndResistance(0.5F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PINE_SLAB = BLOCKS.register("pine_slab",
 			() -> new FlammableSlabBlock(Block.Properties.from(PINE_PLANKS.get()), 20, 5));
+	public static final RegistryObject<Block> PINE_DOOR = BLOCKS.register("pine_door",
+			() -> new ModDoorBlock(Block.Properties.create(Material.WOOD, MaterialColor.GOLD)
+					.hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<Block> PINE_TRAPDOOR = BLOCKS.register("pine_trapdoor",
+			() -> new ModTrapDoorBlock(Block.Properties.from(PINE_DOOR.get())));
 
 	public static final RegistryObject<Block> PINE_LOG = BLOCKS.register("pine_log",
-			() -> new FlammableLogBlock(MaterialColor.BLUE_TERRACOTTA, Block.Properties.from(Blocks.SPRUCE_LOG), 5, 5));
+			() -> new FlammableLogBlock(MaterialColor.GOLD, Block.Properties.from(Blocks.SPRUCE_LOG), 5, 5));
+	public static final RegistryObject<Block> PINE_WOOD = BLOCKS.register("pine_wood",
+			() -> new FlammableBlock(Block.Properties.from(PINE_LOG.get()),5, 5));
+	public static final RegistryObject<Block> STRIPPED_PINE_LOG = BLOCKS.register("stripped_pine_log",
+			() -> new FlammableLogBlock(MaterialColor.GOLD, Block.Properties.from(PINE_LOG.get()),5, 5));
+	public static final RegistryObject<Block> STRIPPED_PINE_WOOD = BLOCKS.register("stripped_pine_wood",
+			() -> new FlammableBlock(Block.Properties.from(PINE_LOG.get()),5, 5));
 	public static final RegistryObject<Block> PINE_LEAVES = BLOCKS.register("pine_leaves",
 			() -> new FlammableLeavesBlock(Block.Properties.from(Blocks.SPRUCE_LEAVES), 60, 30, 1));
 	public static final RegistryObject<Block> PINE_SAPLING = BLOCKS.register("pine_sapling",
