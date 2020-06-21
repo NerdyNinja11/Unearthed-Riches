@@ -6,10 +6,12 @@ import org.apache.logging.log4j.Logger;
 import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import mod.nerdyninja11.unearthedriches.init.ComposterRecipesInit;
+import mod.nerdyninja11.unearthedriches.init.EnchantmentInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModContainerTypes;
 import mod.nerdyninja11.unearthedriches.init.ModEntityTypes;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
+import mod.nerdyninja11.unearthedriches.init.ParticleInit;
 import mod.nerdyninja11.unearthedriches.init.SoundInit;
 import mod.nerdyninja11.unearthedriches.world.ModFeatureGeneration;
 import mod.nerdyninja11.unearthedriches.world.gen.UnearthedRichesOreGen;
@@ -46,7 +48,9 @@ public class UnearthedRiches
     	modEventBus.addListener(this::setup);
     	modEventBus.addListener(this::doClientStuff);
     	
+    	ParticleInit.PARTICLE_TYPES.register(modEventBus);
     	SoundInit.SOUNDS.register(modEventBus);
+    	EnchantmentInit.ENCHANTMENTS.register(modEventBus);
     	ItemInit.ITEMS.register(modEventBus);
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
