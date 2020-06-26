@@ -20,13 +20,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ColouredParticle extends SpriteTexturedParticle {
+public class QuarryParticle extends SpriteTexturedParticle {
 
 	//private double posX, posY, posZ;
 	private float angle;
 
-	public ColouredParticle(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
-			double ySpeedIn, double zSpeedIn, ColouredParticleData data, IAnimatedSprite sprite) {
+	public QuarryParticle(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
+			double ySpeedIn, double zSpeedIn, QuarryParticleData data, IAnimatedSprite sprite) {
 		super(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn);
 
 		this.motionX = xSpeedIn;
@@ -69,16 +69,16 @@ public class ColouredParticle extends SpriteTexturedParticle {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public static class Factory implements IParticleFactory<ColouredParticleData> {
+	public static class Factory implements IParticleFactory<QuarryParticleData> {
 		private final IAnimatedSprite spriteSet;
 
 		public Factory(IAnimatedSprite spriteIn) {
 			this.spriteSet = spriteIn;
 		}
 
-		public Particle makeParticle(ColouredParticleData typeIn, World worldIn, double x,
+		public Particle makeParticle(QuarryParticleData typeIn, World worldIn, double x,
 				double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			ColouredParticle particle = new ColouredParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, typeIn,
+			QuarryParticle particle = new QuarryParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, typeIn,
 					spriteSet);
 			particle.selectSpriteRandomly(spriteSet);
 			return particle;
@@ -86,10 +86,10 @@ public class ColouredParticle extends SpriteTexturedParticle {
 
 	}
 
-	public static class ColouredParticleData implements IParticleData {
-		public static final IParticleData.IDeserializer<ColouredParticleData> DESERIALIZER = new IParticleData.IDeserializer<ColouredParticleData>() {
+	public static class QuarryParticleData implements IParticleData {
+		public static final IParticleData.IDeserializer<QuarryParticleData> DESERIALIZER = new IParticleData.IDeserializer<QuarryParticleData>() {
 
-			public ColouredParticleData deserialize(ParticleType<ColouredParticleData> particleTypeIn,
+			public QuarryParticleData deserialize(ParticleType<QuarryParticleData> particleTypeIn,
 					StringReader reader) throws CommandSyntaxException {
 				reader.expect(' ');
 				float red = (float) reader.readDouble();
@@ -99,11 +99,11 @@ public class ColouredParticle extends SpriteTexturedParticle {
 				float blue = (float) reader.readDouble();
 				reader.expect(' ');
 				float alpha = (float) reader.readDouble();
-				return new ColouredParticleData(red, green, blue, alpha);
+				return new QuarryParticleData(red, green, blue, alpha);
 			}
 			
-			public ColouredParticleData read(ParticleType<ColouredParticleData> particleTypeIn, PacketBuffer buffer) {
-				return new ColouredParticleData(buffer.readFloat(), buffer.readFloat(), buffer.readFloat(),
+			public QuarryParticleData read(ParticleType<QuarryParticleData> particleTypeIn, PacketBuffer buffer) {
+				return new QuarryParticleData(buffer.readFloat(), buffer.readFloat(), buffer.readFloat(),
 						buffer.readFloat());
 			}
 		};
@@ -112,7 +112,7 @@ public class ColouredParticle extends SpriteTexturedParticle {
 		private final float blue;
 		private final float alpha;
 		
-		public ColouredParticleData(float redIn, float greenIn, float blueIn, float alphaIn) {
+		public QuarryParticleData(float redIn, float greenIn, float blueIn, float alphaIn) {
 			this.red = redIn;
 			this.green = greenIn;
 			this.blue = blueIn;
@@ -138,8 +138,8 @@ public class ColouredParticle extends SpriteTexturedParticle {
 		} 
 		
 		@Override
-		public ParticleType<ColouredParticleData> getType() {
-			return ParticleInit.COLOURED_PARTICLE.get();
+		public ParticleType<QuarryParticleData> getType() {
+			return ParticleInit.QUARRY_PARTICLE.get();
 		}
 		
 		@OnlyIn(Dist.CLIENT)

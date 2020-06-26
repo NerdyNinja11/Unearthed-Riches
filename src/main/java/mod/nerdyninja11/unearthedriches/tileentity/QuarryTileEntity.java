@@ -3,7 +3,7 @@ package mod.nerdyninja11.unearthedriches.tileentity;
 import javax.annotation.Nullable;
 
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
-import mod.nerdyninja11.unearthedriches.particles.ColouredParticle;
+import mod.nerdyninja11.unearthedriches.particles.QuarryParticle;
 import mod.nerdyninja11.unearthedriches.util.helpers.NBTHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -43,11 +43,11 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity 
 			}
 			if (y > 4 && tick % 3 == 0 ) {
 				for (int i = (this.pos.getY() - y)/3; i >= 0; i--) {
-					world.addParticle(new ColouredParticle.ColouredParticleData(0.5F, 0.5F, 0.5F, 0.0F),
+					world.addParticle(new QuarryParticle.QuarryParticleData(0.5F, 0.5F, 0.5F, 0.0F),
 							this.pos.getX() + 0.5F, this.pos.getY() - (float) Math.random() * (this.pos.getY() - y), this.pos.getZ() + 0.2F, 0.0f, -0.2F,
 							0.0F);			
 				}
-				world.addParticle(new ColouredParticle.ColouredParticleData(0.5F, 0.5F, 0.5F, 0.0F),
+				world.addParticle(new QuarryParticle.QuarryParticleData(0.5F, 0.5F, 0.5F, 0.0F),
 						this.pos.getX() + 0.5F, this.pos.getY() - 0.5F, this.pos.getZ() + 0.4F, 0.0f, -0.3F,
 						0.0F);
 			}

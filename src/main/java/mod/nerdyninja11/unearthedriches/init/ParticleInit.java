@@ -1,8 +1,8 @@
 package mod.nerdyninja11.unearthedriches.init;
 
 import mod.nerdyninja11.unearthedriches.UnearthedRiches;
-import mod.nerdyninja11.unearthedriches.particles.ColouredParticle;
-import mod.nerdyninja11.unearthedriches.particles.ColouredParticle.ColouredParticleData;
+import mod.nerdyninja11.unearthedriches.particles.QuarryParticle;
+import mod.nerdyninja11.unearthedriches.particles.QuarryParticle.QuarryParticleData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.particles.ParticleType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,12 +19,12 @@ public class ParticleInit {
 	public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = new DeferredRegister<>(
 			ForgeRegistries.PARTICLE_TYPES, UnearthedRiches.MOD_ID);
 
-	public static final RegistryObject<ParticleType<ColouredParticleData>> COLOURED_PARTICLE = PARTICLE_TYPES.register(
-			"coloured_particle", () -> new ParticleType<ColouredParticleData>(false, ColouredParticleData.DESERIALIZER));
+	public static final RegistryObject<ParticleType<QuarryParticleData>> QUARRY_PARTICLE = PARTICLE_TYPES.register(
+			"quarry_particle", () -> new ParticleType<QuarryParticleData>(false, QuarryParticleData.DESERIALIZER));
 	
 	@SuppressWarnings("resource")
 	@SubscribeEvent
 	public static void registerParticleFactory(ParticleFactoryRegisterEvent event) {
-		Minecraft.getInstance().particles.registerFactory(ParticleInit.COLOURED_PARTICLE.get(), ColouredParticle.Factory::new);
+		Minecraft.getInstance().particles.registerFactory(ParticleInit.QUARRY_PARTICLE.get(), QuarryParticle.Factory::new);
 	}
 }

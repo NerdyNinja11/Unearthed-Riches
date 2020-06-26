@@ -33,6 +33,7 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> BIOFUEL = ITEMS.register("biofuel",
 			() -> new FuelItem(new Item.Properties().group(UnearthedRichesItemGroup.UNEARTHEDRICHES), 600));
+	
 
 	public static final RegistryObject<Item> LIVING_MUSHROOM_SPAWN_EGG = ITEMS.register("living_mushroom_spawn_egg",
 			() -> new ModSpawnEggItem(ModEntityTypes.LIVING_MUSHROOM_ENTITY, 10489616, 11699817, new Item.Properties().group(UnearthedRichesItemGroup.UNEARTHEDRICHES)));

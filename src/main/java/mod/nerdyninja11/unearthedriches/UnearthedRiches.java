@@ -7,6 +7,7 @@ import mod.nerdyninja11.unearthedriches.init.BiomeInit;
 import mod.nerdyninja11.unearthedriches.init.BlockInit;
 import mod.nerdyninja11.unearthedriches.init.ComposterRecipesInit;
 import mod.nerdyninja11.unearthedriches.init.EnchantmentInit;
+import mod.nerdyninja11.unearthedriches.init.FluidInit;
 import mod.nerdyninja11.unearthedriches.init.ItemInit;
 import mod.nerdyninja11.unearthedriches.init.ModContainerTypes;
 import mod.nerdyninja11.unearthedriches.init.ModEntityTypes;
@@ -15,6 +16,7 @@ import mod.nerdyninja11.unearthedriches.init.ParticleInit;
 import mod.nerdyninja11.unearthedriches.init.SoundInit;
 import mod.nerdyninja11.unearthedriches.world.ModFeatureGeneration;
 import mod.nerdyninja11.unearthedriches.world.gen.UnearthedRichesOreGen;
+import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -52,6 +54,7 @@ public class UnearthedRiches
     	SoundInit.SOUNDS.register(modEventBus);
     	EnchantmentInit.ENCHANTMENTS.register(modEventBus);
     	ItemInit.ITEMS.register(modEventBus);
+    	FluidInit.FLUIDS.register(modEventBus);
     	BlockInit.BLOCKS.register(modEventBus);
     	ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
     	ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
@@ -67,7 +70,7 @@ public class UnearthedRiches
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
     	final IForgeRegistry<Item> registry = event.getRegistry();
-    	BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+    	BlockInit.BLOCKS.getEntries().stream().filter(block -> !(block.get() instanceof FlowingFluidBlock)).map(RegistryObject::get).forEach(block -> {
     		final Item.Properties properties = new Item.Properties().group(UnearthedRichesItemGroup.UNEARTHEDRICHES);
     		final BlockItem blockItem = new BlockItem(block, properties);
     		blockItem.setRegistryName(block.getRegistryName());
