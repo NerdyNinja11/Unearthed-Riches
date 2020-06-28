@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public class FlammableLogBlock extends LogBlock{
-	private static int flammability, encouragement;
+	private int flammability, encouragement;
 	
 	
 	public FlammableLogBlock(MaterialColor verticalColor, Properties properties, int flammabilityIn, int encouragementIn) {
@@ -31,4 +31,6 @@ public class FlammableLogBlock extends LogBlock{
 	public boolean isFlammable(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 		return true;
 	}
+	
+
 }

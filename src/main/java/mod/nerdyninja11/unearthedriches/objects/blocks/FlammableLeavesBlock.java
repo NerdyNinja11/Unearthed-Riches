@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public class FlammableLeavesBlock extends LeavesBlock{
-	private static int flammability, encouragement, opacity;
+	private int flammability, encouragement, opacity;
 	
 	
 	public FlammableLeavesBlock(Properties properties, int flammabilityIn, int encouragementIn, int opacityIn) {

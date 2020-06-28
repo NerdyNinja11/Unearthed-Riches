@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public class FlammableFenceBlock extends FenceBlock{
-	private static int flammability, encouragement;
+	private int flammability, encouragement;
 	
 	
 	public FlammableFenceBlock(Properties properties, int flammabilityIn, int encouragementIn) {

@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public class FlammableSlabBlock extends SlabBlock{
-	private static int flammability, encouragement;
+	private int flammability, encouragement;
 	
 	
 	public FlammableSlabBlock(Properties properties, int flammabilityIn, int encouragementIn) {

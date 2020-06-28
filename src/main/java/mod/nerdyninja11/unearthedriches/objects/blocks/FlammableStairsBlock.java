@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public class FlammableStairsBlock extends StairsBlock{
-	private static int flammability, encouragement;
+	private int flammability, encouragement;
 	
 	
 	public FlammableStairsBlock(java.util.function.Supplier<BlockState> state, Properties properties, int flammabilityIn, int encouragementIn) {
