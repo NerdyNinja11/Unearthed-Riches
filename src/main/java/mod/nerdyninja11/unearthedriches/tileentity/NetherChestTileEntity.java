@@ -2,6 +2,7 @@ package mod.nerdyninja11.unearthedriches.tileentity;
 
 import javax.annotation.Nonnull;
 
+import mod.nerdyninja11.unearthedriches.UnearthedRiches;
 import mod.nerdyninja11.unearthedriches.container.NetherChestContainer;
 import mod.nerdyninja11.unearthedriches.init.ModTileEntityTypes;
 import mod.nerdyninja11.unearthedriches.objects.blocks.NetherChestBlock;
@@ -63,7 +64,7 @@ public class NetherChestTileEntity extends LockableLootTileEntity {
 
 	@Override
 	protected ITextComponent getDefaultName() {
-		return new TranslationTextComponent("container.nether_chest");
+		return new TranslationTextComponent("container." + UnearthedRiches.MOD_ID + ".nether_chest");
 	}
 
 	@Override

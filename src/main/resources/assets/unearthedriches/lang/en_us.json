@@ -20,6 +20,7 @@
 	"block.unearthedriches.mithril_chain": "Mithril Chain",
 	"block.unearthedriches.quarry": "Quarry",
 	"block.unearthedriches.nether_chest": "Netherwrought Storage Cube",
+	"block.unearthedriches.display_case": "Display Case",
 	"block.unearthedriches.cobblestone_road": "Cobbled Road",
 	
 	"block.unearthedriches.magic_planks": "Mythwood Planks",
@@ -67,7 +68,8 @@
 	"subtitles.entity.living_mushroom_entity.death.joke": "Living Mushroom Dies",
 	
 	
-	"container.nether_chest": "Netherwrought Storage Cube",
+	"container.unearthedriches.nether_chest": "Netherwrought Storage Cube",
+	"container.unearthedriches.display_case": "Display Case ",
 	
 	"enchantment.unearthedriches.strafing": "Strafing",
 	

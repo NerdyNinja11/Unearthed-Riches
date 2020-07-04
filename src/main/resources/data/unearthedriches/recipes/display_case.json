@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"#I#",
+		"OOO"
+	],
+	"key": {
+		"#": {
+			"tag": "forge:glass"
+		},
+		"O": {
+			"tag": "forge:obsidian"
+		},
+		"I": {
+			"item": "minecraft:item_frame"
+		}
+	},
+	"result": {
+		"item": "unearthedriches:display_case"
+	}
+}

@@ -2,6 +2,7 @@ package mod.nerdyninja11.unearthedriches.init;
 
 import mod.nerdyninja11.unearthedriches.UnearthedRiches;
 import mod.nerdyninja11.unearthedriches.objects.blocks.ChainBlock;
+import mod.nerdyninja11.unearthedriches.objects.blocks.DisplayCaseBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableFenceBlock;
 import mod.nerdyninja11.unearthedriches.objects.blocks.FlammableFenceGateBlock;
@@ -143,6 +144,8 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> NETHER_CHEST = BLOCKS.register("nether_chest",
 			() -> new NetherChestBlock(Block.Properties.from(Blocks.RED_NETHER_BRICKS)));
+	public static final RegistryObject<Block> DISPLAY_CASE = BLOCKS.register("display_case",
+			() -> new DisplayCaseBlock(Block.Properties.from(Blocks.GLASS)));
 
 	public static final RegistryObject<Block> COBBLESTONE_ROAD = BLOCKS.register("cobblestone_road",
 			() -> new Block(Block.Properties.from(Blocks.COBBLESTONE).speedFactor(1.35F)));
